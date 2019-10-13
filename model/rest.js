@@ -7,22 +7,12 @@ mongoose.connect(mongoUri);
 
 var Schema = mongoose.Schema;
 
-// Music Model
-var Restaurant = new Schema({
-    rest_name: { type: String, required : "true"},
-    rest_image_url_log: { type: String, required : "true" },
-    rest_address: { type: String, required : "true" },
-    rest_dine_in: { type: Boolean, default: false, required : "false" },
-    rest_takeout: { type: Boolean, default: false, required : "false" },
-    categories: [Categories],
-    modified: { type: Date, default: Date.now }
-});
-
-var Categories = new Schema({
-     cat_id: { type: String, required : "true" },
-     cat_name: { type: String, required : "true" },
-     cat_description: { type: String, required : "true" },
-     sub_category: [SubCategory]
+var Product = new Schema({
+    product_id: {type: String, required: "true"},
+    product_name: {type: String, required: "true"},
+    product_description: {type: String, required: "true"},
+    product_price: {type: String, required: "true"},
+    product_is_spicy: {type: Boolean, default: false, required: "true"}
 });
 
 var SubCategory = new Schema({
@@ -32,12 +22,22 @@ var SubCategory = new Schema({
     product: [Product]
 });
 
-var Product = new Schema({
-    product_id: {type: String, required: "true"},
-    product_name: {type: String, required: "true"},
-    product_description: {type: String, required: "true"},
-    product_price: {type: String, required: "true"},
-    product_is_spicy: {type: Boolean, default: false, required: "true"}
+var Categories = new Schema({
+     cat_id: { type: String, required : "true" },
+     cat_name: { type: String, required : "true" },
+     cat_description: { type: String, required : "true" },
+     sub_category: [SubCategory]
+});
+
+// Restaurant Model
+var Restaurant = new Schema({
+    rest_name: { type: String, required : "true"},
+    rest_image_url_log: { type: String, required : "true" },
+    rest_address: { type: String, required : "true" },
+    rest_dine_in: { type: Boolean, default: false, required : "false" },
+    rest_takeout: { type: Boolean, default: false, required : "false" },
+    categories: [Categories],
+    modified: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Restaurant',Restaurant);
