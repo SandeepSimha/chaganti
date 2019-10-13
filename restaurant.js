@@ -34,17 +34,20 @@ router.route('/restaurants')
 })
 
 // POST to CREATE restaurant object
-.post(function(req, res){
+.post('/restaurants', function(req, res) {
 	var restaurant;
 	var response = {};
 
      restaurant = new mongoOp({
-        title : req.body.title,
-        title_image_url : req.body.title_image_url,
-        album : req.body.album
+        rest_name : req.body.rest_name,
+        rest_image_url_log : req.body.title_image_url,
+        rest_address : req.body.rest_address,
+        rest_dine_in : req.body.rest_dine_in,
+        rest_takeout : req.body.rest_takeout,
+        categories : req.body.categories
      });
 
-    music.save(function(err){
+    restaurant.save(function(err){
             if(err) {
                 response = {"error" : true,"message" : "Error adding data"};
             } else {
