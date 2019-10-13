@@ -34,7 +34,7 @@ router.route('/restaurants')
 })
 
 // POST to CREATE restaurant object
-.post('/restaurants', function(req, res) {
+.post(function(req, res) {
 	var restaurant;
 	var response = {};
 
