@@ -47,8 +47,8 @@ router.route('/restaurants')
         rest_image_url_log : req.body.rest_image_url_log,
         rest_address : req.body.rest_address,
         rest_dine_in : req.body.rest_dine_in,
-        rest_takeout : req.body.rest_takeout//,
-        //categories : req.body.categories
+        rest_takeout : req.body.rest_takeout,
+        categories : req.body.categories
      });
 
     restaurant.save(function(err){
