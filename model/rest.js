@@ -37,7 +37,7 @@ var Restaurant = new Schema({
     rest_address: { type: String, required : "false" },
     rest_dine_in: { type: Boolean, default: false, required : "false" },
     rest_takeout: { type: Boolean, default: false, required : "false" },
-    categories: [Categories],
+    //categories: [Categories],
     modified: { type: Date, default: Date.now }
 });
 
