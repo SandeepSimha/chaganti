@@ -12,8 +12,8 @@ var Restaurant = new Schema({
     rest_name: { type: String, required : "true"},
     rest_image_url_log: { type: String, required : "true" },
     rest_address: { type: String, required : "true" },
-    rest_dine_in: { type: Boolean, required : "false" },
-    rest_takeout: { type: Boolean, required : "false" },
+    rest_dine_in: { type: Boolean, default: false, required : "false" },
+    rest_takeout: { type: Boolean, default: false, required : "false" },
     rest_categories: [Categories]
 });
 
@@ -36,7 +36,7 @@ var Product = new Schema({
     product_name: {type: String, required: "true"},
     product_description: {type: String, required: "true"},
     product_price: {type: String, required: "true"},
-    product_is_spicy: {type: Boolean, required: "true"}
+    product_is_spicy: {type: Boolean, default: false, required: "true"}
 });
 
 module.exports = mongoose.model('Music',Music);
