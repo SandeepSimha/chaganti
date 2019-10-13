@@ -40,4 +40,4 @@ var Product = new Schema({
     product_is_spicy: {type: Boolean, default: false, required: "true"}
 });
 
-module.exports = mongoose.model('Music',Music);
+module.exports = mongoose.model('Restaurant',Restaurant);
