@@ -19,3 +19,9 @@
       "SKU": "",
       "PrintOrder": 0
    }
+
+   app.use("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+   });
+
+## To access the "endpoint/restaurants"

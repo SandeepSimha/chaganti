@@ -13,8 +13,12 @@ app.use(bodyParser.urlencoded({"extended" : false}));
 
 // app.use(express.static(__dirname+ '/website'));
 
-router.get("/",function(req,res){
+router.get("/api",function(req,res){
     res.json({"error" : false,"message" : "To access the endpoint/restaurants"});
+});
+
+router.use("/", (req, res) => {
+ res.sendFile(__dirname + "/index.html");
 });
 
 
