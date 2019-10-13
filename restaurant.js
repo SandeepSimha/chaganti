@@ -53,6 +53,7 @@ router.route('/restaurants')
 
     restaurant.save(function(err){
             if(err) {
+                console.log("Server listening on port " + err);
                 response = {"error" : true,"message" : "Error adding data"};
                 //response = res.send(err);
             } else {
