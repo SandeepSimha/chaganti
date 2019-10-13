@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({"extended" : false}));
 // app.use(express.static(__dirname+ '/website'));
 
 router.get("/",function(req,res){
-    res.json({"error" : false,"message" : "To access the endpoint/api"});
+    res.json({"error" : false,"message" : "To access the endpoint/restaurants"});
 });
 
 
