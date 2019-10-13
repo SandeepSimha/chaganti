@@ -33,12 +33,12 @@ router.route('/restaurants')
 	});
 })
 
-// POST to CREATE
+// POST to CREATE restaurant object
 .post(function(req, res){
-	var music;
+	var restaurant;
 	var response = {};
 
-     music = new mongoOp({
+     restaurant = new mongoOp({
         title : req.body.title,
         title_image_url : req.body.title_image_url,
         album : req.body.album

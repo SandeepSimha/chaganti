@@ -1,1 +1,1 @@
-web: node restaurant.js
+web: node app.js
