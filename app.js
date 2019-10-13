@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({"extended" : false}));
 // app.use(express.static(__dirname+ '/website'));
 
 router.get("/",function(req,res){
-    res.json({"error" : false,"message" : "Hello World"});
+    res.json({"error" : false,"message" : "To access the endpoint/api"});
 });
 
 
@@ -41,7 +41,7 @@ router.route('/api')
      music = new mongoOp({
         title : req.body.title,
         title_image_url : req.body.title_image_url,
-        album : req.body.album        
+        album : req.body.album
      });
 
     music.save(function(err){
