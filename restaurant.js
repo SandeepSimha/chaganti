@@ -48,8 +48,8 @@ router.route('/restaurants')
 
     restaurant.save(function(err){
             if(err) {
-                //response = {"error" : true,"message" : "Error adding data"};
-                response = res.send(err);
+                response = {"error" : true,"message" : "Error adding data"};
+                //response = res.send(err);
             } else {
                 response = {"error" : false,"message" : "Data added"};
             }
