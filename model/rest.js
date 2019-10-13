@@ -8,32 +8,32 @@ mongoose.connect(mongoUri);
 var Schema = mongoose.Schema;
 
 var Product = new Schema({
-    product_id: {type: String, required: "true"},
-    product_name: {type: String, required: "true"},
-    product_description: {type: String, required: "true"},
-    product_price: {type: String, required: "true"},
-    product_is_spicy: {type: Boolean, default: false, required: "true"}
+    product_id: {type: String, required: "false"},
+    product_name: {type: String, required: "false"},
+    product_description: {type: String, required: "false"},
+    product_price: {type: String, required: "false"},
+    product_is_spicy: {type: Boolean, default: false, required: "false"}
 });
 
 var SubCategory = new Schema({
-    sub_cat_id: {type: String, required: "true"},
-    sub_cat_name: {type: String, required: "true"},
-    sub_cat_description: {type: String, required: "true"},
+    sub_cat_id: {type: String, required: "false"},
+    sub_cat_name: {type: String, required: "false"},
+    sub_cat_description: {type: String, required: "false"},
     product: [Product]
 });
 
 var Categories = new Schema({
-     cat_id: { type: String, required : "true" },
-     cat_name: { type: String, required : "true" },
-     cat_description: { type: String, required : "true" },
+     cat_id: { type: String, required : "false" },
+     cat_name: { type: String, required : "false" },
+     cat_description: { type: String, required : "false" },
      sub_category: [SubCategory]
 });
 
 // Restaurant Model
 var Restaurant = new Schema({
-    rest_name: { type: String, required : "true"},
-    rest_image_url_log: { type: String, required : "true" },
-    rest_address: { type: String, required : "true" },
+    rest_name: { type: String, required : "false"},
+    rest_image_url_log: { type: String, required : "false" },
+    rest_address: { type: String, required : "false" },
     rest_dine_in: { type: Boolean, default: false, required : "false" },
     rest_takeout: { type: Boolean, default: false, required : "false" },
     categories: [Categories],
