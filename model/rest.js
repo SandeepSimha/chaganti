@@ -14,21 +14,22 @@ var Restaurant = new Schema({
     rest_address: { type: String, required : "true" },
     rest_dine_in: { type: Boolean, default: false, required : "false" },
     rest_takeout: { type: Boolean, default: false, required : "false" },
-    rest_categories: [Categories]
+    categories: [Categories],
+    modified: { type: Date, default: Date.now }
 });
 
 var Categories = new Schema({
      cat_id: { type: String, required : "true" },
      cat_name: { type: String, required : "true" },
      cat_description: { type: String, required : "true" },
-     cat_sub_cat: [SubCategory]
+     sub_category: [SubCategory]
 });
 
 var SubCategory = new Schema({
     sub_cat_id: {type: String, required: "true"},
     sub_cat_name: {type: String, required: "true"},
     sub_cat_description: {type: String, required: "true"},
-    sub_cat_product: [Product]
+    product: [Product]
 });
 
 var Product = new Schema({
