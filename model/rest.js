@@ -1,6 +1,7 @@
 var mongoose    =   require("mongoose");
 
-var mongoUri = process.env.MONGODB_URI || 'mongodb://chsandeep:Sandeep@511@ds017195.mlab.com:17195/heroku_nr1vzxjj' ;
+var mongoUri = process.env.MONGODB_URI || 'mongodb://chsandeep:Sandeep@511@ds233278.mlab.com:33278/heroku_zlj13mmv';
+
 mongoose.connect(mongoUri);
 
 //mongoose.connect('mongodb://localhost:27017/test');
