@@ -44,7 +44,7 @@ router.route('/restaurants')
 
      restaurant = new mongoOp({
         rest_name : req.body.rest_name,
-        rest_image_url_log : req.body.title_image_url,
+        rest_image_url_log : req.body.rest_image_url_log,
         rest_address : req.body.rest_address,
         rest_dine_in : req.body.rest_dine_in,
         rest_takeout : req.body.rest_takeout//,
