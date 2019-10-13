@@ -17,7 +17,7 @@ router.get("/api",function(req,res){
     res.json({"error" : false,"message" : "To access the endpoint/restaurants"});
 });
 
-router.use("/", (req, res) => {
+router.get("/", (req, res) => {
  res.sendFile(__dirname + "/index.html");
 });
 

@@ -6,10 +6,13 @@
 
  <body>
  <h1>Into to Node and MongoDB</h1>
- <form method="post" action="/addname">
- <label>Enter Your Name</label><br>
- <input type="text" name="firstName" placeholder="Enter first name..." required>
- <input type="text" name="lastName" placeholder="Enter last name..." required>
+ <form method="post" action="/restaurants">
+ <label>Enter Restaurant data</label><br>
+ <input type="text" name="rest_name" placeholder="Enter first name..." required>
+ <input type="text" name="rest_image_url_log" placeholder="IMG Logo" required>
+ <input type="text" name="rest_address" placeholder="Address" required>
+ <input type="text" name="rest_dine_in" placeholder="dine in true/false" required>
+ <input type="text" name="rest_takeout" placeholder="dine takeout true/false" required>
  <input type="submit" value="Add Name">
  </form>
  </body>

@@ -25,3 +25,4 @@
    });
 
 ## To access the "endpoint/restaurants"
+api
